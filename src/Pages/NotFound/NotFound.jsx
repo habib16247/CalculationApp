@@ -1,8 +1,11 @@
 import React from 'react'
+import rocket from "../Users/User.module.css"
 
 const NotFound = () => {
   return (
-    <h1 style={{fontSize: "200px"}}>NotFound</h1>
+    <div className={rocket.e404}>
+      <img src={"/src/assets/image/404.gif"} alt="" />
+    </div>
   )
 }
 

@@ -5,8 +5,10 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './Routes/Router.jsx'
 import "./Components/NavBar.css"
+import ContextProvider from './Components/ContextAPI/ContextProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- 
-    <RouterProvider router={router} />
+    <ContextProvider>
+        <RouterProvider router={router} />
+    </ContextProvider>
 )
