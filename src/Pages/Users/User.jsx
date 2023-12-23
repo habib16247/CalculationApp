@@ -15,7 +15,7 @@ const User = ({
     <div className={user.card}>
       <img
         className={user.ceoImg}
-        src={`/src/assets/image/${id}.jpeg`}
+        src={'https://picsum.photos/seed/picsum/200/300'}
         alt="CEO"
       />
       <div className={user.textSide}>
