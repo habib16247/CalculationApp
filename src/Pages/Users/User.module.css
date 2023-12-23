@@ -59,7 +59,7 @@
 img.ceo {
     margin: auto;
     width: 100%;
-    height: 100%;
+    height: 24rem;
 }
 
 .totalDetails {
@@ -82,9 +82,10 @@ img.ceo {
 
 
 
-.ceo {
+/* .ceo {
     margin: auto;
-}
+    height: 2rem;
+} */
 
 
 /* Footer Styles */
@@ -147,6 +148,10 @@ footer {
     width: 47px;
 }
 
+
+.backB {
+    margin-top: 2rem; 
+}
 
 
 
@@ -215,16 +220,16 @@ footer {
 
   
   .backBtn {
-    display: flex;
-    align-items: center;
     width: 11rem;
     height: 2rem;
     font-size: 1rem;
+    background: aquamarine;
+    color: ghostwhite;
     font-weight: bold;
-    color: #fff;
     border: 0;
     margin-top: 3rem;
 }
+
 
 .link:hover {
     background: transparent;
@@ -278,3 +283,4 @@ footer {
 img.phoneI {
     width: 6rem;
 }
+
