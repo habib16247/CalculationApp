@@ -1,16 +1,15 @@
-
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import login from "../../Users/User.module.css";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { app } from "./../../../Components/Firebase/Firebase.config";
 import { AuthPovider } from "../../../Components/ContextAPI/ContextProvider";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const auth = getAuth(app);
 
 function Resigstration() {
-  const {FBSignIn, GoogleSignIn} = useContext(AuthPovider)
+  const { FBSignIn, GoogleSignIn, TwitterSignIn } = useContext(AuthPovider);
   console.log(useContext(AuthPovider));
   const navigate = useNavigate();
 
@@ -29,54 +28,54 @@ function Resigstration() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => { 
     e.preventDefault();
     console.log(formData);
     createUserWithEmailAndPassword(auth, formData.email, formData.password)
       .then((res) => {
         const user = res.user;
-        return Swal.fire({
-          title: 'Success!',
-          text: 'Do you want to continue',
-          icon: 'success',
-          confirmButtonText: 'Cool'
-        })
         console.log(user);
+        return Swal.fire({
+          title: "Success!",
+          text: "Do you want to continue",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
+
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         return Swal.fire({
-          title: 'Error!',
-          text: 'Do you want to continue',
-          icon: 'error',
-          confirmButtonText: 'Cool'
-        })
+          title: "Error!",
+          text: "Do you want to continue",
+          icon: "error",
+          confirmButtonText: "Cool",
+        });
       });
   };
+
 
   const SignUpHandler = (media) => {
     media()
       .then((res) => {
         const user = res.user;
-        return Swal.fire({
-          title: 'Success!',
-          text: 'Do you want to continue',
-          icon: 'success',
-          confirmButtonText: 'Cool'
-        })
         console.log(user);
+        return Swal.fire({
+          title: "Success!",
+          text: "Do you want to continue",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        console.error("Firebase error:", error);
         return Swal.fire({
-          title: 'Error!',
-          text: 'Do you want to continue',
-          icon: 'error',
-          confirmButtonText: 'Cool'
-        })
+          title: "Error!",
+          text: "Do you want to continue",
+          icon: "error",
+          confirmButtonText: "Cool",
+        });
       });
   };
 
@@ -144,17 +143,22 @@ function Resigstration() {
               alt=""
             />
           </a>
-          <a 
-          onClick={() => SignUpHandler(GoogleSignIn)}
-          className={login.link} 
-          href="#facebook">
+          <a
+            onClick={() => SignUpHandler(GoogleSignIn)}
+            className={login.link}
+            href="#facebook"
+          >
             <img
               className={login.auth}
               src={"/src/assets/image/google.png"}
               alt=""
             />
           </a>
-          <a className={login.link} href="#facebook">
+          <a
+            onClick={() => SignUpHandler(TwitterSignIn)}
+            className={login.link}
+            href="#facebook"
+          >
             <img
               className={login.auth}
               src={"/src/assets/image/twitter.png"}

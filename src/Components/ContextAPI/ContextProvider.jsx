@@ -17,8 +17,13 @@ const ContextProvider = ({ children }) => {
     return signInWithPopup(auth, providerGoogle);
   };
 
+  const providerX = new GoogleAuthProvider();
+  const TwitterSignIn = () => {
+    return signInWithPopup(auth, providerX);
+  };
 
-  const authentication = {FBSignIn, GoogleSignIn, }
+
+  const authentication = {FBSignIn, GoogleSignIn, TwitterSignIn}
   return (
     <AuthPovider.Provider value={authentication}>
       {children}
