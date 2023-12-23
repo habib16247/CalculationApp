@@ -10,7 +10,7 @@ export default function UserDetails() {
   return (
     <>
       <div className={userData.userDetails}>
-      <img className={userData.ceo} src={`/src/assets/image/${id}.jpeg`} alt="CEO" />
+      <img className={userData.ceo} src={'https://picsum.photos/seed/picsum/200/300'} alt="CEO" />
 
         <div className={userData.totalDetails}>
           <h1 className={userData.UserHead}>User Full Details</h1>
