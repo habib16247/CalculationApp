@@ -20,10 +20,15 @@ const Header = () => {
 
         <NavLink to="/users">Users</NavLink>
 
-        <NavLink href="/login">Login</NavLink>
-
-        <NavLink href="/signup">Register</NavLink>
-
+        <div>
+          <div className="dropdown">
+            <summary>Login & Register</summary>
+            <div className="dropdown-content">
+              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/signup">Register</NavLink>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );
