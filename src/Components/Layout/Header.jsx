@@ -1,7 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
 import "../NavBar.css";
+import { signOut } from "firebase/auth";
+import { auth } from "../../Pages/Auth/Registration/Resigstration";
 const Header = () => {
+
+
+  const [user] = useAuthState(auth)
+  const logOut = () => {
+    signOut(auth)
+  }
+
+  
   return (
     <nav>
       <img
@@ -21,13 +32,18 @@ const Header = () => {
         <NavLink to="/users">Users</NavLink>
 
         <div>
-          <div className="dropdown">
+          {
+            user ? 
+            (<NavLink onClick={logOut}>LogOut</NavLink>) 
+            : 
+            (<div className="dropdown">
             <summary>Login & Register</summary>
             <div className="dropdown-content">
               <NavLink to="/login">Login</NavLink>
               <NavLink to="/signup">Register</NavLink>
             </div>
-          </div>
+          </div>)
+          }
         </div>
       </div>
     </nav>

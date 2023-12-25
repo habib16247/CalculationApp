@@ -14,9 +14,11 @@ const MainLayout = () => {
     <div className='container'>
       <Header/>
       <div className="page-data">
+        
         {
           navigation.state === "loading" ? (<Loadding />) : (
             <>
+            
               <Outlet />
               <Footer />
             </>

@@ -1,12 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import register from "../../Users/User.module.css"
 
 const Login = () => {
   return (
-    <div>
-      <img src={"/src/assets/image/register.gif"} alt="" />
-      <NavLink to="/">
-      <button>Back</button>
+    <div className={register.logBG}>
+      
+      <NavLink className={register.btgh} to="/">
+      <button className={register.backLog}>Back</button>
       </NavLink>
     </div>
   )

@@ -82,6 +82,7 @@ img.ceo {
 
 
 
+
 /* .ceo {
     margin: auto;
     height: 2rem;
@@ -249,8 +250,75 @@ footer {
 }
 
 .home {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://i0.wp.com/gifitup.net/wp-content/uploads/2020/10/BackgroundGif.gif?resize=600%2C337&ssl=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.calculateBG {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://i.makeagif.com/media/10-25-2021/ZqmrPr.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.aboutM {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url("https://cdn.pixabay.com/animation/2023/06/26/03/02/03-02-03-917_512.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.contactM {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://38.media.tumblr.com/3521e07cd7405965b19341db5f02782f/tumblr_nt919dYt5s1qa763mo1_500.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logBG {
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://cdn.dribbble.com/users/380268/screenshots/1187493/timelapse-2.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+a.btgh {
+    background: black;
+    width: 100px;
+    margin: auto;
+    position: absolute;
+    bottom: 0px;
+}
+
+.backLog {
+    font-size: 30px;
+    background: #000;
+    border: 0;
+    color: #fff;
 }
 
 .e404 {
@@ -258,27 +326,11 @@ footer {
     justify-content: center;
 }
 
-.calContent {
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-}
 
 .calculation {
     width: 13rem;
 }
 
-.aboutM {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-}
-
-.phone {
-    display: flex;
-    justify-content: center;
-}
 
 img.phoneI {
     width: 6rem;

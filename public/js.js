@@ -27,3 +27,21 @@
 // for (let i = 0; i < x.length; i++) {
 //     console.log(x[i])
 // }
+
+function palindrome(txt) {
+    // Remove unwanted characters
+    let notpalindromeTxt = txt.replace((/[&/\#,+()$~%.'":; *?<>{}]/gi), "");
+        notpalindromeTxt = notpalindromeTxt.replace(/[\[\]]/g, "")
+    let palindromeTxt = '';
+
+    for (let i = notpalindromeTxt.length - 1; i >= 0; i--) {
+        if (notpalindromeTxt[i] !== "[" && notpalindromeTxt[i] !== "]") {
+             palindromeTxt += notpalindromeTxt[i];
+        }
+    }
+    
+    return palindromeTxt === notpalindromeTxt;
+}
+
+let g = palindrome("bangladeshlev'[][][][]][]][[]];'[];elhsedalgnab");
+console.log(g); 
